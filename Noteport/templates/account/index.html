@@ -1,0 +1,19 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title_block %}
+    Home
+{% endblock %}
+
+{% block content_block %}
+    <h1>Welcome to Noteport, {{ user.username }}!</h1>
+    <p>
+        Noteport is a simple note-taking application that allows you to create notes, collaborate with others, and create quizzes and other games.
+    </p>
+    <p>
+        To get started, click the "Notes" link in the navigation bar above.
+    </p>
+{% endblock %}
+
+{% block footer_block %}
+{% endblock %}

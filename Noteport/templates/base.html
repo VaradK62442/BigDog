@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head lang="en">
+    <title>
+        Noteport -
+        {% block title_block %}
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <div class="nav-bar">
+        {% if user.is_authenticated %}
+            <a href="{% url 'account:logout' %}">Logout</a>
+        {% else %}
+            <a href="{% url 'account:login' %}">Login</a>
+            <a href="{% url 'account:register' %}">Register</a>
+        {% endif %}
+
+        {% block navigation_block %}
+        {% endblock %}
+    </div>
+
+    <div class="main-content">
+        {% block content_block %}
+        {% endblock %}
+    </div>
+
+    <div class="footer">
+        {% block footer_block %}
+        {% endblock %}
+        <p>
+            &copy; 2024 Noteport
+        </p>
+    </div>
+</body>
+</html>

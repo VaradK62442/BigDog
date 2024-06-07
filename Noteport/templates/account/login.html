@@ -1,0 +1,17 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title_block %}
+    Register
+{% endblock %}
+
+{% block content_block %}
+    <form id="login_form" method="post" action="{% url 'account:login' %}">
+        {% csrf_token %}
+        {{ login_form.as_p }}
+        <input type="submit" value="Login" />
+    </form>
+{% endblock %}
+
+{% block footer_block %}
+{% endblock %}
