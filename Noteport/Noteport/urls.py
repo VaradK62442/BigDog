@@ -19,11 +19,11 @@ from django.urls import path
 from django.urls import include
 
 from account import views as account_views
-from notes import views as note_views
-from quiz import views as quiz_views
 
 urlpatterns = [
     path('', account_views.index, name='index'),
     path('account/', include('account.urls')),
+    path('note/', include('notes.urls')),
+    path('quiz/', include('quiz.urls')),
     path('admin/', admin.site.urls),
 ]
