@@ -7,8 +7,7 @@ from django.contrib.auth.models import User
 from django.shortcuts import redirect
 from django.urls import reverse
 
-from account.forms import UserForm, UserProfileForm
-from account.models import UserProfile
+from account.forms import UserForm, UserProfileForm, LoginForm
 
 
 @login_required
@@ -34,7 +33,11 @@ def user_login(request):
             return redirect(reverse('account:login'))
     
     else:
-        return render(request, 'account/login.html')
+        return render(
+            request, 
+            'account/login.html',
+            context={'login_form': LoginForm()}
+        )
 
 
 @login_required
