@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+# from quiz.models import StandardQuiz, MultipleChoiceQuestion, TrueFalseQuestion
+
+# admin.site.register(StandardQuiz)
+# admin.site.register(MultipleChoiceQuestion)
+# admin.site.register(TrueFalseQuestion)
